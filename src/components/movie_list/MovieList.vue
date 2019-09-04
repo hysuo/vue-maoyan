@@ -15,21 +15,24 @@
 <script>
 import http from "utils/http";
 import MovieItem from "./MovieItem";
+import BScroll from 'better-scroll'
 export default {
-  data() {
-    return {
-      movieList: []
-    };
-  },
-
+  
   async created() {
     let result = await http.get({ url: "/ajax/movieOnInfoList?token=" });
     this.movieList = result.movieList;
   },
+  mounted() {
+    let bScroll = new BScroll('.page', {
+      pullUpLoad: {
+        threshold: 50
+      }
+    })
 
-  components: {
-    MovieItem
-  }
+    bScroll.on('pullingUp', () => {
+      this.$emit('onmessage', bScroll)
+    })
+  },
 };
 </script>
 

@@ -13,7 +13,7 @@
           </ul>
         </li>
         <li>
-          <van-icon tag="span" name="search" color="#e54847" size=".25rem" />
+          <span class="yo-ico">&#xf067;</span>
         </li>
       </ul>
     </nav>
@@ -79,6 +79,9 @@ export default {
           display flex
           justify-content flex-end
           align-items center
+          span 
+            font-size .16rem
+            color #e54847
   section 
     flex 1
     overflow hidden

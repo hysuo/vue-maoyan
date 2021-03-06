@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page 房贷首付得dfdsfsdfsd到fsfs的</h1>
+    <h1>This is an about page </h1>
   </div>
 </template>
